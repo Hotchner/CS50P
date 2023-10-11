@@ -1,3 +1,3 @@
 msg = input("")
 
-print(msg.replace(" ", "."))
+print(msg.replace(" ", "..."))
