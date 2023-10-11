@@ -1,0 +1,3 @@
+energy = input("E:")
+
+result = 
