@@ -1,9 +1,9 @@
-m = 14
+m = 1
 
 ls = float(299.792458)
 
-c2 = round(ls) ** 2
+c2 = round(ls)
 
-e = m * c2
+e = (m * c2) ** 2
 
 print(e)
