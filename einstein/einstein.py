@@ -1,3 +1,3 @@
-energy = input("E:")
+energy = input("M:")
 
 print()
