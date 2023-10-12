@@ -1,4 +1,4 @@
-m = input("M: ")
+m = int(input("M: "))
 
 lightSpeed = 300000000
 
