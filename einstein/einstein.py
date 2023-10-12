@@ -1,3 +1,5 @@
 energy = input("M:")
 
-print()
+ls = 299.792
+
+print(ls.round())
