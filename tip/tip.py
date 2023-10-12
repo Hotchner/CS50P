@@ -9,7 +9,7 @@ def main():
 def dollars_to_float(d):
     return float(d.replace("$", ""))
 
-#Function to convert string percent in float percent number
+#Function to convert string in percent to float percent number
 def percent_to_float(p):
     return int(p.replace("%", "")) / 100
 
