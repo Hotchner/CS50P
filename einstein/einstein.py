@@ -1,7 +1,7 @@
-m = 14
+mass = 14
 
-ls = 300000000
+lightSpeed = 300000000
 
-e = (m * ls) ** 2
+energy = mass * lightSpeed ** 2
 
-print(e)
+print(energy)
