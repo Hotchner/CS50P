@@ -1,7 +1,7 @@
-mass = 14
+m = int(input("M: "))
 
 lightSpeed = 300000000
 
-energy = mass * lightSpeed ** 2
+energy = m * lightSpeed ** 2
 
 print(energy)
