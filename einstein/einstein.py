@@ -1,5 +1,3 @@
-energy = input("M:")
+ls = float(299.792458)
 
-ls = 299.792
-
-print(ls.round())
+print(round(ls))
