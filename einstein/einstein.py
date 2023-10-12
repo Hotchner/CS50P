@@ -1,3 +1,9 @@
+m = 1
+
 ls = float(299.792458)
 
-print(round(ls))
+c = round(ls) ** 16
+
+e = m * c
+
+print(c)
