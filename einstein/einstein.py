@@ -1,9 +1,7 @@
 m = 1
 
-ls = float(299.792458)
+ls = 300000000
 
-c2 = round(ls)
-
-e = (m * c2) ** 2
+e = (m * ls) ** 2
 
 print(e)
