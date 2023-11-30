@@ -10,7 +10,6 @@ def main(): #Criando a função principal
     #Solicitando o horário 
     currentTime = input("What time is it? ")
 
-    
     if is_close(convert(currentTime), breakFastTime):
         print("breakfast time")
 
