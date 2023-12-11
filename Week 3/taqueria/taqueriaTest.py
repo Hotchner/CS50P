@@ -3,7 +3,7 @@ total = 0
 total += 17.22
 total += 4.23
 
-print(total)
+# print(total)
 
 menu = {
     "Baja Taco": 4.25,
@@ -19,4 +19,12 @@ menu = {
 
 total = total + menu["Baja Taco"]
 
-print(total)
+# while True:
+#     try:
+#         dado = input("Type: ")
+#         if not dado:
+#             break
+#     except EOFError as e:
+#         print(e)
+#         break
+

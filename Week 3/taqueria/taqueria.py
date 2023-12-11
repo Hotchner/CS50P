@@ -21,6 +21,10 @@ def main():
             total = total + menu[f"{item}"]
             print(f"Total: ${total:.2f}")
             continue
+
+        elif not item:
+            raise EOFError
+
         else:
             print(f"Total: ${total:.2f}")
             continue
@@ -30,5 +34,5 @@ while True:
     try:
         main()
     except (EOFError):
-        print("")
         break
+    
