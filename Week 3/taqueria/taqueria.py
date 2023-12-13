@@ -15,24 +15,21 @@ def main():
     total = 0
 
     while True:
-        item = input("Item: ").title()
+        try:
+            item = input("Item: ").title()
 
-        if item in menu:
-            total = total + menu[f"{item}"]
-            print(f"Total: ${total:.2f}")
-            continue
+            if item in menu:
+                total = total + menu[f"{item}"]
+                print(f"Total: ${total:.2f}")
+                continue
 
-        elif not item:
-            raise EOFError
+            else:
+                print(f"Total: ${total:.2f}")
+                continue
+        
+        except EOFError:
+            break
 
-        else:
-            print(f"Total: ${total:.2f}")
-            continue
-
-
-while True:
-    try:
-        main()
-    except (EOFError):
-        break
+if __name__ == "__main__":
+    main()
     
