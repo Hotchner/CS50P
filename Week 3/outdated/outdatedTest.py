@@ -52,3 +52,5 @@ abc = "1/9/2002"
 dia, mes, ano = abc.split("/")
 
 print(f"{int(dia):02}, {int(mes):02}, {ano}")
+
+#Up
