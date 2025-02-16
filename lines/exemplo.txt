@@ -1,0 +1,5 @@
+nome,setor
+ana,rh
+livia,financeiro
+luke,rh
+elton,marketing
