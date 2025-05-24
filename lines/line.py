@@ -1,19 +1,30 @@
 import sys
 
-linhasN = 0
+def get_lines(x):
+    line = 0
+    with open(f"{x}") as file:
+        for _ in file:
+                if _.strip() == "" or _.strip().startswith('#'):
+                    continue
+                else:
+                     line += 1
+        return line  
 
 def main():
-    #Abrindo o arquivo em modo de leitura
-    with open("exemplo.py", "r") as arquivo:
-        #Lendo todas as linhas do arquivo e atribuindo elas a variável linhas
-        linhas = arquivo.readlines()
-        for _ in linhas:
-            if _.startswith("#"):
-                pass
 
-            elif _.startswith(" ", 0, -1):
-                pass
+    if len(sys.argv) < 2:
+         sys.exit("Too few command-line arguments")
+    elif len(sys.argv) > 2:
+         sys.exit("Too many command-line arguments")
 
-            else:
-                linhasN += 1
-        print(f"O texto possui {linhasN} linhas.")
+    file_name = sys.argv[1]
+
+    if not file_name.endswith(".py"):
+        sys.exit("Not a Python file")
+    
+    try:
+         return f"O arquivo possui {get_lines(file_name)} linhas."
+    except FileNotFoundError:
+         sys.exit("File does not exist")
+
+main()
