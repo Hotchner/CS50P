@@ -11,4 +11,4 @@ with open("saida.csv", "w", newline="") as arquivo: #Vai ser criado um arquivo "
     campos = ["nome", "idade"] #Cabeçalhos 
     escritor = csv.DictWriter(arquivo, fieldnames=campos) #Escrevendo os cabeçalhos no arquivo 
     escritor.writeheader()#Preciso entender essa função
-    escritor.writerows(dados)#Escrevendo 
+    escritor.writerows(dados)#Escrevendo
