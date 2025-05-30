@@ -15,15 +15,25 @@ def main():
     if not file_name.endswith(".csv"):
         sys.exit("Not a CSV file")
 
-def main():
     beforeFile = []
+
+    def inverter(name, indicator, column):
+        name_old = name.get(f"{column}")
+        last_name, first_name = name_old.split(f"{indicator}")
+        new_name = f"{first_name}, {last_name}".strip()
+        return new_name
 
     try:
         with open(f"{sys.argv[1]}") as file:
             arquivo = csv.DictReader(file)
             for _ in arquivo:
-                beforeFile.append(_)
-            print(tabulate(beforeFile, headers="keys", tablefmt='grid'))
+                name_old = _.get("name")
+                l_name, f_name = name_old.split(",")
+                new_name = f"{f_name}, {l_name}".strip()
+                beforeFile.append(new_name)
+
+                
+            print(beforeFile)
 
             
     except FileNotFoundError:
