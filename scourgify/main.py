@@ -15,27 +15,22 @@ def main():
     if not file_name.endswith(".csv"):
         sys.exit("Not a CSV file")
 
-    beforeFile = []
-
-    def inverter(name, indicator, column):
-        name_old = name.get(f"{column}")
+    def inverter(name, indicator):
+        name_old = name.strip().replace(" ", "")
         last_name, first_name = name_old.split(f"{indicator}")
-        new_name = f"{first_name}, {last_name}".strip()
+        new_name = f"{first_name}, {last_name}"
         return new_name
+
+    beforeFile = []
 
     try:
         with open(f"{sys.argv[1]}") as file:
             arquivo = csv.DictReader(file)
             for _ in arquivo:
-                name_old = _.get("name")
-                l_name, f_name = name_old.split(",")
-                new_name = f"{f_name}, {l_name}".strip()
-                beforeFile.append(new_name)
+                    _.update({"name": inverter(_.get("name"), ",")})
+                    beforeFile.append(_)     
+        with open()
 
-                
-            print(beforeFile)
-
-            
     except FileNotFoundError:
-        sys.exit(f"Could not read {sys.argv[1]}")
+        sys.exit(f"Could not read {sys.argv[1]}") 
 main()
