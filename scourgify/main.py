@@ -24,15 +24,16 @@ def main():
     dictFile = []
 
     try:
-         with open(f"{sys.argv[1]}") as file:
-             arquivo = csv.DictReader(file)
-             columnName = arquivo.fieldnames
-             for _ in arquivo:
-                     _.update({"name": inverter(_.get("name"), ",")})
-                     dictFile.append(_)
-
+         with open(f"{sys.argv[1]}") as file: #Abrindo o arquivo e colocando uma variável nele
+             arquivo = csv.DictReader(file) #Lendo o arquivo como dicionário
+             for _ in arquivo: #Percorrendo o arquivo
+                     first, last = inverter(_.get("name"), ",")
+                     _.update({"first_name": first, "last_name": last})
+                     del _["name"]  # remove a chave antiga
+                     dictFile.append(_) #Adicionando o dicionário na lista
+         
          with open(f"{sys.argv[2]}", "w", newline="") as file:
-              arquivo = csv.DictWriter(file, fieldnames=columnName)
+              arquivo = csv.DictWriter(file, fieldnames=["first_name", "last_name", "house"])
               arquivo.writeheader()
               arquivo.writerows(dictFile)
     except FileNotFoundError:
