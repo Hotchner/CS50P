@@ -12,7 +12,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["C:/Users/Eduardo/Desktop/CS50P/scourgify/before.csv", "C:/Users/Eduardo/Desktop/CS50P/scourgify/after.csv"]
+            //"args": ["C:/Users/Eduardo/Desktop/CS50P/scourgify/before.csv", "C:/Users/Eduardo/Desktop/CS50P/scourgify/after.csv"]
+            //"args": ["before1.png", "shirt.png"]
         }
     ]
 }
