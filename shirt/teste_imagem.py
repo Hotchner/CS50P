@@ -1,23 +1,23 @@
-from PIL import Image, ImageOps
+# from PIL import Image, ImageOps
 
-#imagem = Image.open("img.jpg")
+# imagem = Image.open("before1.jpg")
 
-#print("Tamanho", imagem.size)
-#print("Formato", imagem.format)
-#print("Modo de cores:", imagem.mode)
+# tamanho = (600, 600)
+# ajustada = ImageOps.fit(imagem, tamanho)
 
-#tamanho = (600, 600)
+# ajustada.show();
 
-#ajustada = ImageOps.fit(imagem, tamanho)
+# foto = Image.open("before1.jpg")
+# camisa = Image.open("shirt.png").convert("RGBA")
 
-#ajustada.show();
+# foto_ajustada = ImageOps.fit(foto, camisa.size) #Redimensiona a foto para o mesmo tamanho da camisa
 
-#foto = Image.open("img.jpg")
-#camisa = Image.open("logo.png").convert("RGBA")
+# foto_ajustada.paste(camisa, (0, 0), camisa)
 
-#foto_ajustada = ImageOps.fit(foto, camisa.size) #Redimensiona a foto para o mesmo tamanho da camisa
+# foto_ajustada.show()
 
-#foto_ajustada.paste(camisa, (0, 0), camisa)
 
-#foto_ajustada.show()
+from PIL import Image
 
+img = Image.open("before1.jpg")
+img.show()
