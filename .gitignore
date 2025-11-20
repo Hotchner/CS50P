@@ -7,3 +7,4 @@ env/
 *.pyc
 *.db-journal
 .vscode
+venv
