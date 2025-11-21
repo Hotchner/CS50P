@@ -1,7 +1,6 @@
 .venv/
 __pycache__
 *.db
-<<<<<<< HEAD
 venv/
 env/
 *.pyc
