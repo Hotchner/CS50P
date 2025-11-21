@@ -8,3 +8,5 @@ env/
 *.db-journal
 .vscode
 venv
+etc
+/etc
