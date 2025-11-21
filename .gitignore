@@ -9,4 +9,4 @@ env/
 venv
 etc
 /etc
-
+/venv
