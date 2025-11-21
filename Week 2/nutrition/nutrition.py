@@ -46,6 +46,6 @@ def main():
 
     for fruit in fruits:
         if fruit["fruit_name"].lower() == fruit_selected:
-            print(f"Calories: {fruit["Calories"]}")
+            print(f"Calories: {fruit['Calories']}")
 
 main()

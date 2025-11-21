@@ -45,7 +45,7 @@ def comma_date(text):
     day = int(day)
 
     if day in range(0, 32) and month in month1:
-        return f"{year.strip()}-{month1.index(f"{month}")+1:02}-{int(day):02}"
+        return f"{year.strip()}-{month1.index(month)+1:02}-{int(day):02}"
 
     else:
         raise ValueError
